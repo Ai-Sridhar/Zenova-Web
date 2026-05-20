@@ -1,0 +1,551 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#000;
+    color:white;
+    overflow:hidden;
+    height:100vh;
+}
+
+/* PARTICLES */
+
+.particles{
+    position:absolute;
+    width:100%;
+    height:100%;
+
+    background-image:
+    radial-gradient(#00aaff 1px, transparent 1px);
+
+    background-size:50px 50px;
+
+    opacity:0.12;
+
+    animation:moveParticles 20s linear infinite;
+
+    z-index:-3;
+}
+
+@keyframes moveParticles{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    height:75px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 60px;
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    z-index:100;
+
+    background:transparent;
+
+    backdrop-filter:blur(5px);
+}
+
+/* LOGO */
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-section img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+}
+
+.logo-section h1{
+    font-size:26px;
+    font-weight:600;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#d6d6d6;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#45c7ff;
+}
+
+/* HERO */
+
+.hero{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* GLOW */
+
+.background-glow{
+    position:absolute;
+
+    width:750px;
+    height:750px;
+
+    background:radial-gradient(circle,#009dff 0%, transparent 70%);
+
+    filter:blur(120px);
+
+    opacity:0.35;
+
+    z-index:-2;
+
+    animation:pulseGlow 5s infinite alternate;
+}
+
+@keyframes pulseGlow{
+
+    from{
+        transform:scale(0.8);
+        opacity:0.3;
+    }
+
+    to{
+        transform:scale(1.2);
+        opacity:0.55;
+    }
+}
+
+/* LOGO CONTAINER */
+
+.logo-container{
+    position:relative;
+
+    width:300px;
+    height:300px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:35px;
+}
+
+/* CENTER LOGO */
+
+.hero-logo{
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    z-index:2;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 20px #00aaff,
+    0 0 50px #00aaff,
+    0 0 90px rgba(0,170,255,0.8);
+
+    animation:
+    logoRotate 12s linear infinite,
+    float 4s ease-in-out infinite;
+
+    transition:0.5s;
+}
+
+/* FLOAT */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* LOGO ROTATION */
+
+@keyframes logoRotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* ROTATING RINGS */
+
+.rotating-ring{
+    position:absolute;
+
+    width:240px;
+    height:240px;
+
+    border-radius:50%;
+
+    border:4px solid transparent;
+
+    border-top:4px solid #00aaff;
+
+    border-bottom:4px solid #6fd3ff;
+
+    animation:rotate 6s linear infinite;
+
+    box-shadow:
+    0 0 20px #00aaff,
+    0 0 50px #00aaff;
+}
+
+/* SECOND RING */
+
+.ring2{
+    width:290px;
+    height:290px;
+
+    border-top:4px solid white;
+
+    border-bottom:4px solid #00aaff;
+
+    animation:rotateReverse 10s linear infinite;
+
+    opacity:0.7;
+}
+
+/* RING ROTATION */
+
+@keyframes rotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes rotateReverse{
+
+    from{
+        transform:rotate(360deg);
+    }
+
+    to{
+        transform:rotate(0deg);
+    }
+}
+
+/* HOVER EFFECT */
+
+.logo-container:hover .hero-logo{
+
+    animation:
+    logoRotate 2s linear infinite,
+    float 2s ease-in-out infinite;
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 30px #00aaff,
+    0 0 70px #00aaff,
+    0 0 120px #00aaff;
+}
+
+.logo-container:hover .rotating-ring{
+
+    animation-duration:1.5s;
+
+    box-shadow:
+    0 0 40px #00aaff,
+    0 0 80px #00aaff,
+    0 0 140px #00aaff;
+}
+
+/* TITLE */
+
+.animated-title{
+    position:relative;
+
+    font-size:72px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    animation:titleFloat 4s ease-in-out infinite;
+}
+
+/* TITLE FLOAT */
+
+@keyframes titleFloat{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* GRADIENT TEXT */
+
+.text-gradient{
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #8fdfff,
+        #00aaff,
+        #ffffff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 5s linear infinite;
+}
+
+/* SHINE EFFECT */
+
+@keyframes shine{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:300%;
+    }
+}
+
+/* SPARKS */
+
+.spark{
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#6fd3ff;
+
+    box-shadow:
+    0 0 10px #6fd3ff,
+    0 0 25px #00aaff,
+    0 0 40px #00aaff;
+
+    animation:sparkMove 3s linear infinite;
+}
+
+/* SPARK POSITIONS */
+
+.spark1{
+    top:-10px;
+    left:10%;
+}
+
+.spark2{
+    top:20px;
+    right:10%;
+    animation-delay:1s;
+}
+
+.spark3{
+    bottom:-10px;
+    left:50%;
+    animation-delay:2s;
+}
+
+/* SPARK ANIMATION */
+
+@keyframes sparkMove{
+
+    0%{
+        transform:translateY(0px) scale(1);
+        opacity:1;
+    }
+
+    50%{
+        transform:translateY(-20px) scale(1.5);
+        opacity:0.7;
+    }
+
+    100%{
+        transform:translateY(-40px) scale(0.5);
+        opacity:0;
+    }
+}
+
+/* DESCRIPTION */
+
+.hero p{
+    width:60%;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#cfcfcf;
+
+    margin-bottom:45px;
+}
+
+/* BUTTON */
+
+.start-btn{
+    padding:18px 55px;
+
+    border:none;
+
+    border-radius:60px;
+
+    font-size:20px;
+
+    font-weight:500;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:linear-gradient(to right,#1e90ff,#71d6ff);
+
+    box-shadow:
+    0 0 25px rgba(0,162,255,0.7);
+
+    transition:0.4s;
+}
+
+.start-btn:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+    0 0 50px rgba(0,162,255,1);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .animated-title{
+        font-size:55px;
+    }
+
+    .hero p{
+        width:80%;
+        font-size:18px;
+    }
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:0 20px;
+    }
+
+    .logo-section h1{
+        font-size:22px;
+    }
+
+    .nav-links{
+        gap:20px;
+    }
+
+    .nav-links a{
+        font-size:14px;
+    }
+
+    .animated-title{
+        font-size:42px;
+    }
+
+    .hero p{
+        width:90%;
+        font-size:16px;
+    }
+
+    .logo-container{
+        width:220px;
+        height:220px;
+    }
+
+    .hero-logo{
+        width:130px;
+        height:130px;
+    }
+
+    .rotating-ring{
+        width:180px;
+        height:180px;
+    }
+
+    .ring2{
+        width:220px;
+        height:220px;
+    }
+
+    .start-btn{
+        padding:15px 40px;
+        font-size:18px;
+    }
+}

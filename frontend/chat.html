@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zenova AI</title>
+    
+    <link rel="icon" type="image/x-icon" href="./logo.jpeg">
+
+    <link rel="stylesheet" href="chat.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <!-- TOP -->
+
+        <div>
+
+            <div class="logo-section">
+
+                <img src="./logo.jpeg">
+
+                <h2>Zenova AI</h2>
+
+            </div>
+
+            <!-- NEW CHAT -->
+
+            <button class="new-chat">
+
+                + New Chat
+
+            </button>
+
+            <!-- HISTORY -->
+
+            <div class="history">
+
+                <p class="history-title">
+                    Recent
+                </p>
+
+                <div class="history-item active">
+                    💬 What is AI?
+                </div>
+
+                <div class="history-item">
+                    💬 Python Help
+                </div>
+
+                <div class="history-item">
+                    💬 Machine Learning
+                </div>
+
+                <div class="history-item">
+                    💬 HTML Website
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+
+        <div class="bottom-menu">
+
+            <div class="bottom-item">
+                👤 Profile
+            </div>
+
+            <div class="bottom-item" id="settingsBtn">
+                ⚙ Settings
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN CHAT -->
+
+    <div class="main-chat">
+
+        <!-- TOP BAR -->
+
+        <div class="top-bar">
+
+            <div class="top-left">
+
+                <div class="live-dot"></div>
+
+                <h1>Zenova AI</h1>
+
+            </div>
+
+            <button class="share-btn">
+
+                Share
+
+            </button>
+
+        </div>
+
+        <!-- CHAT BOX -->
+
+        <div class="chat-box" id="chatBox">
+
+            <!-- BOT -->
+
+            <div class="bot-message">
+
+                <div class="message-top">
+
+                    <img src="./logo.jpeg">
+
+                    <span>Zenova AI</span>
+
+                </div>
+
+                <div class="message-text">
+
+                    Hello 👋 <br><br>
+
+                    I am Zenova AI. Ask me anything.
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- INPUT -->
+
+        <div class="input-wrapper">
+
+            <div class="input-area">
+
+                <button class="icon-btn">
+                    📎
+                </button>
+
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Message Zenova AI..."
+                >
+
+                <button class="icon-btn">
+                    🎤
+                </button>
+
+                <button id="sendBtn" class="send-btn">
+
+                    ➤
+
+                </button>
+
+            </div>
+
+            <p class="bottom-text">
+                Zenova AI may produce inaccurate information.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- SETTINGS PANEL -->
+
+    <div class="settings-panel" id="settingsPanel">
+
+        <!-- HEADER -->
+
+        <div class="settings-header">
+
+            <button class="back-btn" id="closeSettings">
+
+                ←
+
+            </button>
+
+            <h1>Gemini settings</h1>
+
+        </div>
+
+        <!-- SETTINGS ITEMS -->
+
+        <div class="settings-list">
+
+            <div class="setting-item">
+
+                <div class="setting-icon">
+                    🔗
+                </div>
+
+                <div>
+
+                    <h3>Your public links</h3>
+
+                    <p>
+                        Control how you share chats and responses
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="setting-item">
+
+                <div class="setting-icon">
+                    🔊
+                </div>
+
+                <div>
+
+                    <h3>Gemini's voice</h3>
+
+                    <p>
+                        Choose how Gemini will sound
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="setting-item">
+
+                <div class="setting-icon">
+                    ✨
+                </div>
+
+                <div>
+
+                    <h3>Interrupt Live responses</h3>
+
+                    <p>
+                        Talk to interrupt Gemini in Live chats
+                    </p>
+
+                </div>
+
+                <!-- SWITCH -->
+
+                <label class="switch">
+
+                    <input type="checkbox" checked>
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+            <div class="setting-item">
+
+                <div class="setting-icon">
+                    💬
+                </div>
+
+                <div>
+
+                    <h3>Caption preferences</h3>
+
+                    <p>
+                        Manage device captions
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="setting-item">
+
+                <div class="setting-icon">
+                    🌐
+                </div>
+
+                <div>
+
+                    <h3>Languages</h3>
+
+                    <p>
+                        For speaking to Gemini
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="setting-item">
+
+                <div class="setting-icon">
+                    ✔
+                </div>
+
+                <div>
+
+                    <h3>Talk to Gemini hands-free</h3>
+
+                    <p>
+                        Say "Hey Google"
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="setting-item">
+
+                <div class="setting-icon">
+                    📱
+                </div>
+
+                <div>
+
+                    <h3>Screen context</h3>
+
+                    <p>
+                        Allow Gemini to capture your screen
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="chat.js"></script>
+
+</body>
+
+</html>
