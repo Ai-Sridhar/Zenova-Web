@@ -86,7 +86,7 @@ git clone https://github.com/Ai-Sridhar/Zenova-Web.git
 ## 2️⃣ Open Project
 
 ```bash
-cd MODELLOOK
+cd Zenova-Web
 ```
 
 ---
